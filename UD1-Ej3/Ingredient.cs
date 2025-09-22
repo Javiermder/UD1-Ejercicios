@@ -19,7 +19,7 @@ namespace UD1_Ej3
 
         }
 
-        //Metodo de preparacion
+        //Metodo de preparacion 
 
         public void MakeFood() {
             Console.WriteLine($"Preparando {Count} gramos de {Name}");
