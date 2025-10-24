@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_Ej2_CONTROLESMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15,0" Spacing="15">
+
+            <!-- Control Borde -->
+            <Label Text="Control Borde"
+                   FontSize="15"
+                   FontAttributes="Bold" />
+
+            <Border BackgroundColor="#2B0B98"
+                    Stroke="#C49B33"
+                    StrokeThickness="5"
+                    StrokeShape="RoundRectangle 10,0,0,40"
+                    WidthRequest="100"
+                    HorizontalOptions="Center">
+                <Label Text=".Net MAUI" TextColor="White" />
+            </Border>
+
+            <!-- Control BoxView -->
+            <Label Text="CONTROL BOXVIEW"
+                   FontSize="15"
+                   FontAttributes="Bold" />
+
+            <BoxView WidthRequest="100"
+                     HeightRequest="100"
+                     BackgroundColor="Blue"
+                     CornerRadius="10" />
+
+            <!-- Control Fecha -->
+            <Label Text="CONTROL FECHA"
+                   FontSize="15"
+                   FontAttributes="Bold" />
+
+            <DatePicker MinimumDate="01/01/2025"
+                        MaximumDate="01/01/2025"
+                        Date="01/09/2025" />
+
+            <!-- Control Frame -->
+            <Label Text="CONTROL FECHA"
+                   FontSize="15"
+                   FontAttributes="Bold" />
+
+            <Frame BackgroundColor="Chocolate"
+                   CornerRadius="5"
+                   HasShadow="True" />
+
+            <!-- Control Entry -->
+            <Label Text="CONTROL Entry"
+                   FontSize="15"
+                   FontAttributes="Bold" />
+
+            <Entry Placeholder="Caja de texto para escribir"/>
+
+            <!-- Control Editor -->
+            <Label Text="CONTROL EDITOR"
+                   FontSize="15"
+                   FontAttributes="Bold" />
+
+            <Editor BackgroundColor="Aqua"
+                    HeightRequest="100"
+                    Placeholder="Escribe aqui tu opinion" 
+                    PlaceholderColor="Red"
+                    x:Name="edUser"/>
+
+            <!-- Control Slider -->
+            <Label Text="CONTROL SLIDER"
+                 FontSize="15"
+                 FontAttributes="Bold" />
+
+            <Slider Minimum="1" Maximum="20" Value="10"/>
+
+            <!-- CONTROL INDICADOR DE ACTIVIDAD-->
+            <Label Text="CONTROL INDICADOR DE ACTIVIDAD"
+                 FontSize="15"
+                 FontAttributes="Bold" />
+
+            <ActivityIndicator IsRunning="True" HorizontalOptions="Center" Color="Aquamarine"/>
+
+
+            <!-- CONTROL IMAGEN Y BOTON DE IMAGEN-->
+            <Label Text="CONTROL IMAGEN Y BOTON DE IMAGEN"
+                 FontSize="15"
+                 FontAttributes="Bold" />
+
+            <Image Source="dotnet_bot.png" HorizontalOptions="Center" WidthRequest="299" HeightRequest="399" />
+
+            <ImageButton Source="dotnet_bot.png"
+                         WidthRequest="300"
+                         HeightRequest="300"
+                         Aspect="AspectFill"
+                         Clicked="ImageButton_Clicked"/>
+
+            <!-- CONTROL CASILLA DE VERIFICACION Y SWITCH-->
+            <Label Text="CONTROL CASILLA DE VERIFICACION Y SWITCH"
+        FontSize="15"
+         FontAttributes="Bold" />
+
+            <HorizontalStackLayout>
+                <CheckBox  />
+                <Label Text="Estudiante" Margin="0,10,0,10"/>
+
+            </HorizontalStackLayout>
+
+            <Switch/>
+
+
+            <!-- CONTROL BARRA DE PROGRESO, TEXTBOX DE BUSQUEDA, COMBOBOX Y STEPPER-->
+            <Label Text="CONTROL BARRA DE PROGRESO, TEXTBOX DE BUSQUEDA, COMBOBOX Y STEPPER"
+                FontSize="15"
+                FontAttributes="Bold" />
+
+            <ProgressBar Progress="0.8" ProgressColor="Chocolate"/>
+
+            <SearchBar/>
+
+            <Picker>
+                <Picker.Items>
+                    <x:String>Cocida</x:String>
+
+                    <x:String>Lentejas</x:String>
+
+                    <x:String>Habichuelas</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Stepper x:Name="stepperr" Minimum="0" Maximum="10"></Stepper>
+
+
+            <Label Text="{Binding Source={x:Reference stepperr}, Path=Value, Mode=OneWay}" TextColor="Orange"/>
+
+
+            <!-- CONTROL RADIOBUTTON Y LA HORA-->
+            <Label Text="CONTROL RADIOBUTTON Y LA HORA"
+            FontSize="15"
+            FontAttributes="Bold" />
+
+
+            <RadioButton GroupName="radio1" Content="Hombre"/>
+            <RadioButton GroupName="radio1" Content="Mujer"/>
+            <RadioButton GroupName="radio1" Content="Parracopter"/>
+
+
+            <!-- CONTROL LISTADOS-->
+            <Label Text="CONTROL LISTADOS"
+                FontSize="15"
+                FontAttributes="Bold" />
+
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>MEMORIA</x:String>
+                        <x:String>Disco duro</x:String>
+                        <x:String>CPU</x:String>
+                        <x:String>Placa base</x:String>
+                        <x:String>DISIPADOR</x:String>
+                        <x:String>Tarjeytas gradicas</x:String>
+
+                    </x:Array>
+                </ListView.ItemsSource>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <CollectionView>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="2" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>MEMORIA</x:String>
+                        <x:String>Disco duro</x:String>
+                        <x:String>CPU</x:String>
+                        <x:String>Placa base</x:String>
+                        <x:String>DISIPADOR</x:String>
+                        <x:String>Tarjetas gráficas</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="AliceBlue" Padding="10">
+                            <Label Text="{Binding .}" TextColor="Black"/>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

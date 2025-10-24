@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="UD2_Ej2_CONTROLESMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UD2_Ej2_CONTROLESMAUI"
+    Title="UD2_Ej2_CONTROLESMAUI">
+
+    <ShellContent
+        Title="EJEMPLO 02 Controles con NetMAUI"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>

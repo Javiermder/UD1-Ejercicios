@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJEMPLOSLAYOUT.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <!-- 🧱 Layout: Grid -->
+            <Label Text="Ejemplo de Grid Layout"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0"
+                       Text="Column 0, Row 0"
+                       WidthRequest="200" />
+                <Label Grid.Row="0" Grid.Column="1"
+                       Text="Column 1, Row 0" />
+                <Label Grid.Row="1" Grid.Column="0"
+                       Text="Column 0, Row 1" />
+                <Label Grid.Row="1" Grid.Column="1"
+                       Text="Column 1, Row 1" />
+            </Grid>
+
+            <!-- 🧭 Layout: FlexLayout -->
+            <Label Text="Ejemplo de FlexLayout"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+            <FlexLayout Direction="Row" AlignItems="Center">
+                <BoxView Color="LightBlue" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightYellow" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGreen" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightPink" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGray" WidthRequest="100" HeightRequest="100" />
+            </FlexLayout>
+
+            <!-- 📐 Layout: VerticalStackLayout -->
+            <Label Text="Ejemplo de VerticalStackLayout"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+            <VerticalStackLayout>
+                <BoxView Color="LightBlue" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightYellow" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGreen" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightPink" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGray" WidthRequest="100" HeightRequest="100" />
+            </VerticalStackLayout>
+
+            <!-- 📏 Layout: HorizontalStackLayout -->
+            <Label Text="Ejemplo de HorizontalStackLayout"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+            <HorizontalStackLayout>
+                <BoxView Color="LightBlue" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightYellow" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGreen" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightPink" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGray" WidthRequest="100" HeightRequest="100" />
+            </HorizontalStackLayout>
+
+            <!-- 🎯 Layout: AbsoluteLayout -->
+            <Label Text="Ejemplo de AbsoluteLayout"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+            <AbsoluteLayout Margin="20"
+                            BackgroundColor="LightBlue">
+                <BoxView Color="Red"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         AbsoluteLayout.LayoutBounds="0, 0, 100, 100"
+                         Rotation="30" />
+                <BoxView Color="Green"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100"
+                         Rotation="60" />
+                <BoxView Color="Blue"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         AbsoluteLayout.LayoutBounds="1, 0, 100, 100" />
+            </AbsoluteLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

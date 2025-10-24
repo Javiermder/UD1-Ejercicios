@@ -1,0 +1,23 @@
+﻿<Window x:Class="UD2_EJ1_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UD2_EJ1_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Label x:Name="size" Content="CATALOGO DE PELICULAS" HorizontalAlignment="Center" VerticalAlignment="Center" AutomationProperties.Name="dfd" FontSize="24"/>
+        </Grid>
+        <Label Content="Nombre de la pelicula:&#xD;&#xA;" HorizontalAlignment="Left" Margin="136,36,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbPeli" HorizontalAlignment="Left" Margin="280,40,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAnadirPeli" Content="Añadir pelicula" HorizontalAlignment="Left" Margin="136,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="125" Click="Button_Click"/>
+        <ComboBox x:Name="cbPeli" HorizontalAlignment="Left" Margin="280,8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.35,-0.333" SelectionChanged="cbPeli_SelectionChanged"/>
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="EJBebidas.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EJBebidas"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Fila para nombre -->
+            <RowDefinition Height="Auto"/>
+            <!-- Fila para botones -->
+            <RowDefinition Height="*"/>
+            <!-- Fila para lista -->
+            <RowDefinition Height="Auto"/>
+            <!-- Fila para total -->
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Nombre de la Bebida:" VerticalAlignment="Center" Grid.Column="0"/>
+            <TextBox x:Name="txtNombreBebida" Grid.Column="1" Margin="10,0,0,0"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnAgregar" Content="Agregar bebida" Width="120" Grid.Column="0" Click="btnAgregar_Click"/>
+            <Button x:Name="btnEliminar" Content="Eliminar bebida" Width="120" Grid.Column="1" Margin="10,0,0,0" IsEnabled="False" Click="btnEliminar_Click" Height="21" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Grid>
+
+        <ListBox x:Name="lstBebidas" Grid.Row="2" Background="White" BorderBrush="Gray" BorderThickness="1" SelectionChanged="lstBebidas_SelectionChanged"/>
+
+        <Label x:Name="lblTotal" Grid.Row="3" Content="Total de Bebidas: 0" HorizontalAlignment="Right" Margin="0,10,0,0"/>
+    </Grid>
+
+</Window>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJEMPLO01.MainPage">
+
+    <ScrollView>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".25*"/>
+                <RowDefinition Height=".25*"/>
+                <RowDefinition Height=".25*"/>
+                <RowDefinition Height=".25*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+
+
+                <Label Grid.Row="0" Text="Elemento principal del binding: "/>
+                <Entry Grid.Row="1" x:Name="entryBinding" 
+                       Text="{Binding Source={x:Reference mySlider}, Path=Value, Mode=TwoWay}"
+                       Placeholder="Numero entre 1 y 10" WidthRequest="300"/>
+                
+
+            
+
+
+                <Label Grid.Row="2" Text="Elemento secundario del binding: "/>
+                <Slider Grid.Row="3" Minimum="1" Maximum="10"
+                        x:Name="mySlider" WidthRequest="300"/>
+
+
+
+
+        </Grid>
+        
+    </ScrollView>
+
+</ContentPage>
