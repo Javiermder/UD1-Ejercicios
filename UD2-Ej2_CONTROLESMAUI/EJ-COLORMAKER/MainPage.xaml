@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EJ_COLORMAKER.MainPage" BackgroundColor="Green">
+             x:Class="EJ_COLORMAKER.MainPage" x:Name="backcolor" BackgroundColor="Green">
 
     <ScrollView>
         <VerticalStackLayout
@@ -20,22 +20,23 @@
 
                     <Label Text="Red" TextColor="Black"
                         HorizontalOptions="Center" />
-                    <Slider x:Name="red" WidthRequest="100"
-                        HorizontalOptions="Center" ValueChanged="red_ValueChanged"/>
+                    <Slider x:Name="redS" WidthRequest="100"
+                        HorizontalOptions="Center" Minimum="0" Maximum="255" ValueChanged="red_ValueChanged"/>
 
                     <Label Text="Green" TextColor="Black"
                         HorizontalOptions="Center" />
-                    <Slider x:Name="green" WidthRequest="100"
-                        HorizontalOptions="Center" ValueChanged="green_ValueChanged"/>
+                    <Slider x:Name="greenS" WidthRequest="100"
+                        HorizontalOptions="Center" Minimum="0" Maximum="255" ValueChanged="green_ValueChanged"/>
 
                     <Label Text="Blue" TextColor="Black"
                         HorizontalOptions="Center" />
-                    <Slider x:Name="blue" WidthRequest="100"
-                        HorizontalOptions="Center" ValueChanged="blue_ValueChanged" />
+                    <Slider x:Name="blueS" WidthRequest="100"
+                        HorizontalOptions="Center" Minimum="0" Maximum="255" ValueChanged="blue_ValueChanged" />
 
-                    <Label Text="Hexadecimal: "/>
+                    <Label Text="Hexadecimal: #"/><Label Text="" x:Name="hexadecimal"/>
 
-                    <Button Text="Generar color aleatorio" BackgroundColor="Green"
+
+                    <Button Text="Generar color aleatorio" Clicked="RandomColor" BackgroundColor="Green"
                             HeightRequest="100" WidthRequest="100"/>
                 </VerticalStackLayout>
             </Frame>
