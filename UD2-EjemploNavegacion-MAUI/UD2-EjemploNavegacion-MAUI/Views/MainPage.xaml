@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EjemploNavegacion_MAUI.Views.MainPage"
+             Background="Cornsilk">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Taller de coches AUTOLUCENA"
+            FontSize="20"
+            TextColor="DarkBlue"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Label Text="Neumaticos"
+               FontFamily="Arial"
+               FontSize="Medium"/>
+
+        <ImageButton Source="neumaticos.jpg" Aspect="AspectFit" 
+                     WidthRequest="150" HeightRequest="150"
+                     x:Name="imgBtnTire" Clicked="imgBtnTire_Clicked"/>
+
+
+
+        <Label Text="Cita al taller"
+               FontFamily="Arial"
+               FontSize="Medium"/>
+
+        <ImageButton Source="cita.jpg" Aspect="AspectFit" 
+                     WidthRequest="150" HeightRequest="150"
+                     x:Name="imgBtnQuote" Clicked="imgBtnQuote_Clicked"/>
+
+        <Label Text="Contacto con el taller"
+               FontFamily="Arial"
+               FontSize="Medium"/>
+
+        <ImageButton Source="contacto.jpg" Aspect="AspectFit" WidthRequest="150" HeightRequest="150"
+            
+                     x:Name="imgBtnContact" Clicked="imgBtnContact_Clicked"/>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
