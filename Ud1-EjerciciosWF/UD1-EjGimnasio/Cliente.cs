@@ -9,13 +9,24 @@ namespace UD1_EjGimnasio
     public class Cliente
     {
 
-        private int codigo { get; set; }
-        private String nombre { get; set; }
-        private String apellidos { get; set; }
-        private DateTime FechaNac { get; set; }
-        private String Ciudad { get; set; }
+        public String codigo { get; set; }
+        public String nombre { get; set; }
+        public String apellidos { get; set; }
+        public DateTime fechaNac { get; set; }
+        public String ciudad { get; set; }
 
-        private String telefono { get; set; }
+        public String telefono { get; set; }
+
+        public Cliente(String Codigo, String Nombre, String Apellidos, DateTime FechaNac, String Ciudad, String Telefono) {
+        
+            this.codigo = Codigo;
+            this.nombre = Nombre;
+            this.apellidos = Apellidos;
+            this.fechaNac = FechaNac;
+            this.ciudad = Ciudad;
+            this.telefono = Telefono;
+        
+        }
 
     }
 }

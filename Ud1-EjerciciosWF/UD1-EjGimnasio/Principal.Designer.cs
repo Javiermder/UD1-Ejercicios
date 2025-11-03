@@ -31,9 +31,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.enlace2 = new System.Windows.Forms.LinkLabel();
+            this.enlace1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,33 +62,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.linkLabel3);
-            this.panel1.Controls.Add(this.linkLabel2);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.enlace2);
+            this.panel1.Controls.Add(this.enlace1);
             this.panel1.Location = new System.Drawing.Point(73, 202);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(281, 100);
             this.panel1.TabIndex = 2;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(14, 14);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "CLIENTES DEL GYM";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(17, 40);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(150, 13);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "ACTIVIDADES DEPORTIVAS";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -101,7 +80,29 @@
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "RESERVAR ACTIVIDAD";
             // 
-            // Form1
+            // enlace2
+            // 
+            this.enlace2.AutoSize = true;
+            this.enlace2.Location = new System.Drawing.Point(17, 40);
+            this.enlace2.Name = "enlace2";
+            this.enlace2.Size = new System.Drawing.Size(150, 13);
+            this.enlace2.TabIndex = 1;
+            this.enlace2.TabStop = true;
+            this.enlace2.Text = "ACTIVIDADES DEPORTIVAS";
+            this.enlace2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.enlace2Clikao);
+            // 
+            // enlace1
+            // 
+            this.enlace1.AutoSize = true;
+            this.enlace1.Location = new System.Drawing.Point(14, 14);
+            this.enlace1.Name = "enlace1";
+            this.enlace1.Size = new System.Drawing.Size(110, 13);
+            this.enlace1.TabIndex = 0;
+            this.enlace1.TabStop = true;
+            this.enlace1.Text = "CLIENTES DEL GYM";
+            this.enlace1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.enlaceClick);
+            // 
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +111,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "GIMNASIO OLIMPIA";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -125,9 +126,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel enlace1;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel enlace2;
     }
 }
 

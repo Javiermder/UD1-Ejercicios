@@ -16,10 +16,18 @@ namespace UD1_EjGimnasio
         {
             InitializeComponent();
         }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+       
+        private void enlaceClick(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            VentanaClientes ventana = new VentanaClientes();
+            ventana.ShowDialog();
+        }
 
+        private void enlace2Clikao(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VentanaActividades ventana = new VentanaActividades();
+            ventana.Show();
+            this.Close();
         }
     }
 }
