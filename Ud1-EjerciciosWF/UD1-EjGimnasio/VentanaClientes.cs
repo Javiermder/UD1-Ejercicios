@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,15 +15,15 @@ namespace UD1_EjGimnasio
     public partial class VentanaClientes : Form
     {
         List<Cliente> Clientes = new List<Cliente>();
-        
+
 
         public VentanaClientes()
         {
             InitializeComponent();
-            
+
         }
 
-        
+
 
         private void btnAnadir_Click(object sender, EventArgs e)
         {
@@ -43,15 +45,18 @@ namespace UD1_EjGimnasio
                 recargarLista();
                 limpiarCampos();
             }
-            else if (!camposCorrectos) {
+            else if (!camposCorrectos)
+            {
                 MessageBox.Show("Debe de rellenar todos los campos del formulario");
             }
-            else {
+            else
+            {
                 MessageBox.Show("El codigo introducido ya existe");
             }
         }
 
-        private void limpiarCampos() {
+        private void limpiarCampos()
+        {
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtApellidos.Text = "";
@@ -60,11 +65,13 @@ namespace UD1_EjGimnasio
             txtTelefono.Text = "";
         }
 
-        private Boolean comprobarCodigo() {
+        private Boolean comprobarCodigo()
+        {
 
             String codigo = txtCodigo.Text;
 
-            foreach (Cliente c in Clientes) {
+            foreach (Cliente c in Clientes)
+            {
                 if (c.codigo == codigo)
                 {
                     return true;
@@ -72,9 +79,10 @@ namespace UD1_EjGimnasio
             }
             return false;
         }
-        
 
-        private Boolean comprobarCampos() {
+
+        private Boolean comprobarCampos()
+        {
 
             if (string.IsNullOrEmpty(txtApellidos.Text)) { return false; }
             if (string.IsNullOrEmpty(txtCiudad.Text)) { return false; }
@@ -85,11 +93,12 @@ namespace UD1_EjGimnasio
             return true;
         }
 
-        private void recargarLista() {
+        private void recargarLista()
+        {
 
             dgv.DataSource = null;
             dgv.DataSource = Clientes;
-        
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -130,6 +139,7 @@ namespace UD1_EjGimnasio
             }
         }
 
+
         private void clickEnTabla(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -153,6 +163,43 @@ namespace UD1_EjGimnasio
             else
             {
                 MessageBox.Show("Selecciona una fila válida primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string codigo = txtCodigo.Text;
+
+            foreach (Cliente c in Clientes)
+            {
+                if (c.codigo == codigo)
+                {
+                    Clientes.Remove(c);
+                    txtCodigo.Text = "";
+                    txtNombre.Text = "";
+                    txtApellidos.Text = "";
+                    dtpFecha.Value = DateTime.Now;
+                    txtCiudad.Text = "";
+                    txtTelefono.Text = "";
+                    recargarLista();
+                    break;
+                }
+
+            }
+
+        }
+
+        private void btnGuardarJSON_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string jsonString = JsonSerializer.Serialize(Clientes);
+                File.WriteAllText("clientes.json", jsonString);
+                Console.WriteLine("Clientes guardados en clientes.json con éxito.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al guardar los clientes: " + ex.Message);
             }
         }
     }

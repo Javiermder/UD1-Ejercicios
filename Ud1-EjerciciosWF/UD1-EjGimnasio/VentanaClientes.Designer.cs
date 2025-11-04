@@ -113,6 +113,7 @@
             this.btnGuardarJSON.TabIndex = 15;
             this.btnGuardarJSON.Text = "Guardar JSON";
             this.btnGuardarJSON.UseVisualStyleBackColor = true;
+            this.btnGuardarJSON.Click += new System.EventHandler(this.btnGuardarJSON_Click);
             // 
             // btnEliminar
             // 
@@ -122,6 +123,7 @@
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 

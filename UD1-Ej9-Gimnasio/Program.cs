@@ -175,9 +175,41 @@ namespace UD1_Ej9_Gimnasio
                 }
             }
 
-            void CargarClientesDeJSON() {
-            
-                
+            void CargarClientesDeJSON()
+            {
+                try
+                {
+                    if (File.Exists("clientes.json"))
+                    {
+                        string jsonString = File.ReadAllText("clientes.json");
+                        List<Cliente> clientesCargados = JsonSerializer.Deserialize<List<Cliente>>(jsonString);
+
+                        if (clientesCargados != null)
+                        {
+                            listaClientes = clientesCargados;
+
+                            // Actualizar el contador de códigos para evitar duplicados
+                            if (listaClientes.Count > 0)
+                            {
+                                CodigoCliente = listaClientes.Max(c => c.CodigoCliente) + 1;
+                            }
+
+                            Console.WriteLine("Clientes cargados correctamente desde clientes.json.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No se pudieron cargar los clientes. El archivo está vacío o mal formado.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("El archivo clientes.json no existe.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al cargar los clientes: " + ex.Message);
+                }
             }
 
         }
