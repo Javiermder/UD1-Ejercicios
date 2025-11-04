@@ -149,7 +149,8 @@ namespace UD1_Ej9_Gimnasio
                 Console.WriteLine("Ese cliente no existe.");
             }
 
-            void BorrarTodosLosCLientes() {
+            void BorrarTodosLosCLientes()
+            {
 
                 Console.WriteLine("Introduzca la contraseña de admin para eliminar todos los clientes");
                 String pass = Console.ReadLine();
@@ -158,7 +159,7 @@ namespace UD1_Ej9_Gimnasio
                 {
                     listaClientes.Clear();
                 }
-            
+
             }
 
             void GuardaClientesJSON()

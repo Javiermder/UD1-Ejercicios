@@ -154,6 +154,7 @@ namespace UD1_EjGimnasio
                 string telefono = fila.Cells["telefono"].Value.ToString();
 
                 txtCodigo.Text = codigo;
+                txtCodigo.Enabled = false; // Deshabilitar edición del código para que no se modifique
                 txtNombre.Text = nombre;
                 txtApellidos.Text = apellidos;
                 dtpFecha.Value = fecha;
@@ -202,5 +203,44 @@ namespace UD1_EjGimnasio
                 Console.WriteLine("Error al guardar los clientes: " + ex.Message);
             }
         }
+
+        private void btnCargarJSON_clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                //INDICAR EL NOMBRE DEL FICHERO DEL Q SACAMOS LOS DATOS
+                string rutaArchivo = "clientes.json";
+
+                if (File.Exists(rutaArchivo))
+                {
+                    string jsonString = File.ReadAllText(rutaArchivo);
+
+                    //LISTA CON LOS CLIENTES CARGADOS
+                    List<Cliente> clientesCargados = JsonSerializer.Deserialize<List<Cliente>>(jsonString);
+
+                    //SI NO ES NULO Y TIENE ELEMENTOS ASIGNAMOS A LA LISTA PRINCIPAL
+                    if (clientesCargados != null && clientesCargados.Count > 0)
+                    {
+                        Clientes = clientesCargados;
+                        recargarLista();
+                        Console.WriteLine("Clientes cargados correctamente desde el archivo.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("El archivo está vacío o no contiene clientes válidos.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("El archivo clientes.json no existe.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al cargar los clientes: " + ex.Message);
+            }
+
+        }
     }
+
 }

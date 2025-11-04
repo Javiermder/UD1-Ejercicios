@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCargarJSON = new System.Windows.Forms.Button();
             this.btnGuardarJSON = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btnCargarJSON);
             this.groupBox1.Controls.Add(this.btnGuardarJSON);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnModificar);
@@ -96,14 +96,15 @@
             this.dtpFecha.Size = new System.Drawing.Size(200, 20);
             this.dtpFecha.TabIndex = 17;
             // 
-            // button5
+            // btnCargarJSON
             // 
-            this.button5.Location = new System.Drawing.Point(307, 158);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Cargar JSON";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCargarJSON.Location = new System.Drawing.Point(307, 158);
+            this.btnCargarJSON.Name = "btnCargarJSON";
+            this.btnCargarJSON.Size = new System.Drawing.Size(100, 23);
+            this.btnCargarJSON.TabIndex = 16;
+            this.btnCargarJSON.Text = "Cargar JSON";
+            this.btnCargarJSON.UseVisualStyleBackColor = true;
+            this.btnCargarJSON.Click += new System.EventHandler(this.btnCargarJSON_clicked);
             // 
             // btnGuardarJSON
             // 
@@ -284,7 +285,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCargarJSON;
         private System.Windows.Forms.Button btnGuardarJSON;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;

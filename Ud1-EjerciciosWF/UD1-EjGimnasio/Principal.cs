@@ -26,8 +26,9 @@ namespace UD1_EjGimnasio
         private void enlace2Clikao(object sender, LinkLabelLinkClickedEventArgs e)
         {
             VentanaActividades ventana = new VentanaActividades();
-            ventana.Show();
-            this.Close();
+            this.Hide(); // Oculta la ventana principal
+            ventana.ShowDialog(); // Muestra la ventana de actividades como modal
+            this.Show(); // Vuelve a mostrar la principal cuando se cierre la otra
         }
     }
 }
