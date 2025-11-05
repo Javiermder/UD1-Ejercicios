@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PuntoLimpioMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label 
+                Text="Ayuntamiento de Lucena. Gestión de Residuos"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Frame 
+                BackgroundColor="Salmon"
+                CornerRadius="10"
+                Padding="15"
+                Margin="10">
+                <VerticalStackLayout>
+
+                    <Label Text="Nombre Residuo:"/>
+                    <Entry x:Name="nombreResiduo" Placeholder="Ingrese el nombre del residuo"/>
+
+                    <Label Text="Tipo de Residuo:"/>
+                    <Entry x:Name="tipoResiduo" Placeholder="Ingrese el tipo de residuo"/>
+
+                    <Label Text="Tipo Cantidad: "/>
+                    <Entry x:Name="tipoCantidad" />
+
+
+
+                </VerticalStackLayout>
+
+
+            </Frame>
+
+            <Button 
+                Text="Agregar Residuo"
+                Clicked="agregarResiduoClicked"/>
+            <Button 
+                Text="Eliminar Residuo"
+                Clicked="borrarResiduoClicked"/>
+
+
+            <Label 
+                Text="Lista de Residuos:"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <CollectionView
+                x:Name="residuosCollectionView"
+                SelectionMode="Single"  SelectionChanged="ResiduoSeleccionado"
+                Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame 
+                            BackgroundColor="LightGray"
+                            CornerRadius="5"
+                            Padding="10"
+                            Margin="0,5">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Nombre}    " FontAttributes="Bold"/>
+                                <Label Text="{Binding Tipo}      "/>
+                                <Label Text="{Binding Cantidad}"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
