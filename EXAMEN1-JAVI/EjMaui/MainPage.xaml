@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image
+                Source="pizza.png"
+                HeightRequest="150"
+                Aspect="AspectFit"
+                />
+
+            <Label
+                Text="Configurador de pizza"
+                TextColor="Red"
+                HorizontalOptions="Center"
+                FontSize="20"
+                />
+
+            <Label Text="_____________________________"
+                   TextColor="Yellow"
+                   HorizontalOptions="Center"/>
+
+            <Label
+                Text="Selecciona el tamaño:"
+                />
+
+            <RadioButton GroupName="tamaño" IsChecked="True" Content="Pequeña"/>
+            <RadioButton GroupName="tamaño" Content="Mediana"/>
+            <RadioButton GroupName="tamaño" Content="Grande"/>
+
+            <Label Text="Ingredientes adicionales(+€1.50 c/u):" FontSize="20"/>
+
+            <HorizontalStackLayout>
+                <CheckBox x:Name="Jamon" />
+                <Label Text="Jamon"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <CheckBox x:Name="Champiñones" />
+                <Label Text="Champiñones"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <CheckBox x:Name="Aceitunas" />
+                <Label Text="Aceitunas"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <CheckBox x:Name="Piña"/>
+                <Label Text="Piña"/>
+
+            </HorizontalStackLayout>
+
+
+
+
+            <Label Text="Cantidad de pizzas:" FontSize="20"/>
+            <Slider x:Name="CantidadSlider" ValueChanged="CantidadSlider_ValueChanged_1" Minimum="1" Maximum="10" Value="1"/>
+            <Label Text="1 Pizza" x:Name="cantidadLabel" FontSize="18"/>
+
+            <HorizontalStackLayout>
+                <Switch x:Name="domicilio"/>
+                <Image
+                    Source="entrega.png"
+                    HeightRequest="20"
+                    Aspect="AspectFit"/>
+                <Label Text="Servicio a domicilio (+€3.00)"/>
+
+            </HorizontalStackLayout>
+
+
+            <Button ImageSource="carrito.png" HeightRequest="10" Text="CONFIRMAR PEDIDO" BackgroundColor="Orange"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

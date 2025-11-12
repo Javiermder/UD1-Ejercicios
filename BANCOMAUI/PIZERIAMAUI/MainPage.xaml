@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIZERIAMAUI.MainPage">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Tipo de Pizza" FontSize="20"/>
+        <Picker x:Name="tipoPizzaPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Margarita</x:String>
+                    <x:String>Pepperoni</x:String>
+                    <x:String>Cuatro Quesos</x:String>
+                    <x:String>Barbacoa</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Cantidad" FontSize="20"/>
+        <Stepper x:Name="cantidadStepper" Minimum="1" Maximum="10" Increment="1"/>
+        <Label Text="{Binding Source={x:Reference cantidadStepper}, Path=Value}" FontSize="18"/>
+
+        <Button Text="Siguiente" Clicked="OnSiguienteClicked"/>
+    </VerticalStackLayout>
+
+</ContentPage>

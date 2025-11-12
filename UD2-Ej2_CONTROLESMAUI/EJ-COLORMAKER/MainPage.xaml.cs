@@ -40,8 +40,6 @@
         }
 
 
-
-
         private void RandomColor(object sender, EventArgs e)
         {
             Random rand = new Random();

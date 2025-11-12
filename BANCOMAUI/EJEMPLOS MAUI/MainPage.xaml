@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJEMPLOS_MAUI.MainPage">
+
+    <Grid RowDefinitions="Auto, Auto, Auto, *"
+          Padding="20"
+          RowSpacing="15">
+
+        <!-- Fila 1: Perfil, Balance y Notificación -->
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+            <Label Text="👤" FontSize="24" />
+            <Label Text="Balance: $40,000" FontSize="18" TextColor="Black" />
+            <Label Text="🔔" FontSize="24" />
+        </StackLayout>
+
+        <!-- Fila 2: Tarjeta del banco -->
+        <Frame Grid.Row="1" BackgroundColor="#3498DB" CornerRadius="10" Padding="15">
+            <StackLayout>
+                <Label Text="BANK NAME" FontSize="20" TextColor="White" />
+                <Label Text="4532 3100 9999 1048" FontSize="18" TextColor="White" />
+                <Label Text="CARDHOLDER NAME" FontSize="16" TextColor="White" />
+                <Label Text="Expira: 06/00" FontSize="14" TextColor="White" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Fila 3: Botones -->
+        <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+            <Button Text="Depósito" BackgroundColor="#2ECC71" TextColor="White" />
+            <Button Text="Retirada" BackgroundColor="#E74C3C" TextColor="White" />
+            <Button Text="Transferencia" BackgroundColor="#9B59B6" TextColor="White" />
+        </StackLayout>
+
+        <!-- Fila 4: Lista de operaciones -->
+        <CollectionView x:Name="OperacionesView" Grid.Row="3">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontSize="14" TextColor="Black" Padding="5" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+
+
+
+
+</ContentPage>

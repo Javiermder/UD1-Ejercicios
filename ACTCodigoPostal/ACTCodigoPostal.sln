@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaWF", "BibliotecaWF\BibliotecaWF.csproj", "{4DC33C61-0E76-4A7A-8675-E630230A9BB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormularioCliente", "FormularioCliente\FormularioCliente.csproj", "{FF45862D-38F8-41FE-9EE5-5F4BA3351532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DC33C61-0E76-4A7A-8675-E630230A9BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC33C61-0E76-4A7A-8675-E630230A9BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC33C61-0E76-4A7A-8675-E630230A9BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC33C61-0E76-4A7A-8675-E630230A9BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF45862D-38F8-41FE-9EE5-5F4BA3351532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF45862D-38F8-41FE-9EE5-5F4BA3351532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF45862D-38F8-41FE-9EE5-5F4BA3351532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF45862D-38F8-41FE-9EE5-5F4BA3351532}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B51ED4A-048A-4E4A-8684-1711792DE698}
+	EndGlobalSection
+EndGlobal

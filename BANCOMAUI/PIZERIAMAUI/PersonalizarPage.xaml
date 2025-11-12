@@ -1,0 +1,17 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIZERIAMAUI.PersonalizarPage"
+             Title="PersonalizarPage">
+    
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label Text="Ingredientes adicionales" FontSize="20"/>
+        <CheckBox x:Name="quesoExtra" /> <Label Text="Queso Extra"/>
+
+        <CheckBox x:Name="jamon" /><Label Text="Jamon"/>
+        <CheckBox x:Name="champinones" /> <Label Text="Champiñones"/>
+        <CheckBox x:Name="aceitunas"/><Label Text="Aceitunas"/>
+        <CheckBox x:Name="pimientos" /><Label Text="Pimientos"/>
+
+        <Button Text="Siguiente" Clicked="OnSiguienteClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
