@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UD3-PERSISTENCIAMAUI", "UD3-PERSISTENCIAMAUI\UD3-PERSISTENCIAMAUI.csproj", "{3776A0DE-407E-4BDD-9878-6E178FDADBCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UD3-PERSISTENCIAWF", "UD3-PERSISTENCIAWF\UD3-PERSISTENCIAWF.csproj", "{B0C9429C-1447-4089-8D31-49F42E6CA622}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3776A0DE-407E-4BDD-9878-6E178FDADBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3776A0DE-407E-4BDD-9878-6E178FDADBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3776A0DE-407E-4BDD-9878-6E178FDADBCF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3776A0DE-407E-4BDD-9878-6E178FDADBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3776A0DE-407E-4BDD-9878-6E178FDADBCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C9429C-1447-4089-8D31-49F42E6CA622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C9429C-1447-4089-8D31-49F42E6CA622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C9429C-1447-4089-8D31-49F42E6CA622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C9429C-1447-4089-8D31-49F42E6CA622}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB56F087-23A6-4461-931F-59D13EC03F44}
+	EndGlobalSection
+EndGlobal

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tbCodigos = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lbCodigos = new System.Windows.Forms.ListBox();
+            this.lstResultados = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbCodigos = new System.Windows.Forms.ComboBox();
+            this.cmbCodigos = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -45,12 +45,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar codigo postal:";
             // 
-            // tbCodigos
+            // txtBuscar
             // 
-            this.tbCodigos.Location = new System.Drawing.Point(60, 53);
-            this.tbCodigos.Name = "tbCodigos";
-            this.tbCodigos.Size = new System.Drawing.Size(120, 20);
-            this.tbCodigos.TabIndex = 1;
+            this.txtBuscar.Location = new System.Drawing.Point(60, 53);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(120, 20);
+            this.txtBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -61,13 +61,13 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // lbCodigos
+            // lstResultados
             // 
-            this.lbCodigos.FormattingEnabled = true;
-            this.lbCodigos.Location = new System.Drawing.Point(60, 90);
-            this.lbCodigos.Name = "lbCodigos";
-            this.lbCodigos.Size = new System.Drawing.Size(120, 95);
-            this.lbCodigos.TabIndex = 3;
+            this.lstResultados.FormattingEnabled = true;
+            this.lstResultados.Location = new System.Drawing.Point(60, 90);
+            this.lstResultados.Name = "lstResultados";
+            this.lstResultados.Size = new System.Drawing.Size(120, 95);
+            this.lstResultados.TabIndex = 3;
             // 
             // label2
             // 
@@ -78,23 +78,24 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Codigo postal";
             // 
-            // cbCodigos
+            // cmbCodigos
             // 
-            this.cbCodigos.FormattingEnabled = true;
-            this.cbCodigos.Location = new System.Drawing.Point(60, 214);
-            this.cbCodigos.Name = "cbCodigos";
-            this.cbCodigos.Size = new System.Drawing.Size(121, 21);
-            this.cbCodigos.TabIndex = 5;
+            this.cmbCodigos.FormattingEnabled = true;
+            this.cmbCodigos.Location = new System.Drawing.Point(60, 214);
+            this.cmbCodigos.Name = "cmbCodigos";
+            this.cmbCodigos.Size = new System.Drawing.Size(121, 21);
+            this.cmbCodigos.TabIndex = 5;
+            this.cmbCodigos.SelectedIndexChanged += new System.EventHandler(this.cbCodigos_SelectedIndexChanged);
             // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cbCodigos);
+            this.Controls.Add(this.cmbCodigos);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbCodigos);
+            this.Controls.Add(this.lstResultados);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.tbCodigos);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(382, 266);
             this.MinimumSize = new System.Drawing.Size(382, 266);
@@ -108,10 +109,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbCodigos;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ListBox lbCodigos;
+        private System.Windows.Forms.ListBox lstResultados;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbCodigos;
+        private System.Windows.Forms.ComboBox cmbCodigos;
     }
 }
