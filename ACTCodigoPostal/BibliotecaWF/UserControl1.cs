@@ -23,6 +23,11 @@ namespace BibliotecaWF
             lstResultados.SelectedIndexChanged += LstResultados_SelectedIndexChanged;
         }
 
+        public String CodigoSeleccionado
+        {
+            get { return cmbCodigos.SelectedItem?.ToString() ?? string.Empty; }
+        }
+
         private void InicializarComboBox()
         {
             cmbCodigos.Items.Clear();

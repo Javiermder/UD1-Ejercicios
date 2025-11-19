@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="UD3_PERSISTENCIAMAUI.AppShell"
+    x:Class="Ejercicio3MAUI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:UD3_PERSISTENCIAMAUI"
-    Title="UD3_PERSISTENCIAMAUI">
+    xmlns:local="clr-namespace:Ejercicio3MAUI"
+    Title="Ejercicio3MAUI">
 
     <ShellContent
-        Title=""
+        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
